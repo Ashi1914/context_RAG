@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus RAG Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Nexus<span>AI</span></h2>
+                <p>Knowledge Base</p>
+            </div>
+            
+            <div class="upload-section">
+                <h3>Documents</h3>
+                <div class="upload-dropzone" id="dropzone">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <p>Drag & drop or <span>browse</span></p>
+                    <input type="file" id="fileInput" multiple accept=".pdf,.docx">
+                </div>
+                <div id="uploadStatus" class="upload-status"></div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <p>System Status: <span class="status-indicator online"></span> Online</p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <header class="chat-header">
+                <h1>Retrieval Augmented Generation</h1>
+                <p>Ask anything about your uploaded documents.</p>
+            </header>
+            
+            <div class="chat-history" id="chatHistory">
+                <!-- Messages will appear here -->
+                <div class="message system-message">
+                    <div class="message-content">
+                        Hello! Upload some documents to the Knowledge Base, then ask me a question.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea id="questionInput" placeholder="Type your question here..." rows="1"></textarea>
+                    <button id="sendBtn" class="send-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

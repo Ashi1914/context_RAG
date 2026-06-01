@@ -1,5 +1,24 @@
+# Environment
 .env
+
+# Python compiled files
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
 venv/
+.venv/
+env/
+
+# IDE
 .vscode/
+.idea/
+
+# Vector Database
 chroma_db/
+
+# OS
+.DS_Store
+Thumbs.db
